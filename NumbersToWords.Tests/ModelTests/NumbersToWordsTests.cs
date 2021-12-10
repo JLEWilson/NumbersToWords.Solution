@@ -29,5 +29,12 @@ namespace NumbersToWords.Tests
       string numberAsString = Wordifier.ChangeToWords(number);
       Assert.AreEqual("fifty-five", numberAsString);
     }
+    [TestMethod]
+    public void ChangeToWords_ReturnWordsForIntAbove100_fivehundredfiftyfive()
+    {
+      string number = "555";
+      string numberAsString = Wordifier.ChangeToWords(number);
+      Assert.AreEqual("five hundred fifty-five", numberAsString);
+    }
   }
 }
